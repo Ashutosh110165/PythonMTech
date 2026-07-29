@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎉 Quiz Completed!</h1>
+
+        <h2>Congratulations, {{ player }}!</h2>
+
+        <div class="result-box">
+
+            <p><strong>Score:</strong> {{ score }} / {{ total }}</p>
+
+            <p><strong>Percentage:</strong> {{ percentage }}%</p>
+
+            <p><strong>Correct Answers:</strong> {{ correct }}</p>
+
+            <p><strong>Incorrect Answers:</strong> {{ incorrect }}</p>
+
+            <p><strong>Performance:</strong> {{ message }}</p>
+
+        </div>
+
+        <a href="{{ url_for('restart') }}">
+            <button type="button">
+                Play Again
+            </button>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

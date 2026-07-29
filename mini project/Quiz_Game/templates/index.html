@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Python Quiz Game</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🐍 Python Quiz Game</h1>
+
+        <p class="subtitle">
+            Test your Python knowledge with 10 multiple-choice questions.
+        </p>
+
+        <form action="{{ url_for('start') }}" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+                autocomplete="off">
+
+            <button type="submit">
+                Start Quiz
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
